@@ -52,6 +52,9 @@ const config = {
           main: "#F48400",
         },
       },
+      gridTemplateColumns: {
+        footer: "repeat(3, minmax(200px, 1fr))",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
