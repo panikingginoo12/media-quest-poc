@@ -1,8 +1,6 @@
-
-import Image from 'next/image';
 import React from 'react';
 
-import BottomSocialsOnly from './socials-only/BottomSOcialsOnly';
+// import BottomSocialsOnly from './socials-only/BottomSOcialsOnly';
 import TopSocialsOnly from './socials-only/TopSocialsOnly';
 
 const Footer = () => {
@@ -49,9 +47,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-light-main dark:bg-dark-main py-5 px-2.5">
+      {/* <div className="bg-light-main dark:bg-dark-main py-5 px-2.5">
         <BottomSocialsOnly />
-      </div>
+      </div> */}
     </div>
   )
 }
