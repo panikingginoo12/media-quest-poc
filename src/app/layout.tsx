@@ -3,6 +3,8 @@ import './globals.css';
 
 import { Roboto } from 'next/font/google';
 
+import Footer from '@/components/footer';
+import ThemeSwitcherButton from '@/components/theme-switcher-button';
 import { cn } from '@/lib/utils';
 
 import { ThemeProvider } from './ThemeProvider';
@@ -26,7 +28,16 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={cn(roboto.className, 'bg-light-000 antialiased')}>
         <ThemeProvider>
-          {children}
+          <div className="flex flex-col h-dvh">
+            <header>
+              <ThemeSwitcherButton />
+
+            </header>
+            <main className="flex-1">
+              {children}
+            </main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>

@@ -1,10 +1,11 @@
 import React from 'react';
 
+import Footer from '@/components/footer';
 import ThemeSwitcherButton from '@/components/theme-switcher-button';
 
 const HomePage = () => {
   return (
-    <ThemeSwitcherButton />
+    <div>home</div>
   )
 }
 
