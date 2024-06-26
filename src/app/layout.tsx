@@ -1,18 +1,12 @@
 import type { Metadata } from "next";
 import './globals.scss';
 
-import { Roboto } from 'next/font/google';
-
 import Footer from '@/components/footer';
 import ThemeSwitcherButton from '@/components/theme-switcher-button';
 import { cn } from '@/lib/utils';
+import { roboto } from '@/utils/fonts';
 
 import { ThemeProvider } from './ThemeProvider';
-
-const roboto = Roboto({
-  weight: ["400", "500", "700", "900"],
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -33,7 +27,7 @@ export default function RootLayout({
               <ThemeSwitcherButton />
 
             </header>
-            <main className="flex-1">
+            <main className="flex-1 bg-light-000">
               {children}
             </main>
             <Footer />
