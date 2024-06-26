@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import './globals.css';
+import './globals.scss';
 
 import { Roboto } from 'next/font/google';
 
@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(roboto.className, 'bg-light-000 antialiased')}>
+      <body className={cn(roboto.className, 'bg-light-000 antialiased text-dark-main')}>
         <ThemeProvider>
           <div className="flex flex-col h-dvh">
             <header>
