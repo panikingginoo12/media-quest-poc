@@ -3,6 +3,7 @@ import React from 'react';
 
 import { cn } from '@/lib/utils';
 import { roboto_condensed } from '@/utils/fonts';
+import eyeIcon from '@public/assets/images/dark/white-eye-icon-small.svg';
 
 import PostTypeLeague from '../post-types/league';
 import PostType from '../post-types/type';
@@ -23,11 +24,16 @@ interface TileProps {
   author?: string;
 }
 
-const Tile = ({ read, img, description = '', leagues, types, date, author }: TileProps) => {
+const Tile = ({ read = true, img, description = '', leagues, types, date, author }: TileProps) => {
   return (
     <div className='w-[380px] min-h-[346px] bg-light-000 dark:bg-dark-main rounded-[14px] p-2.5 flex flex-col gap-2 overflow-hidden hover:dark:bg-dark-002 transition-[background-color] cursor-pointer'>
       <div className="relative">
         <Image src={img.src} alt={img.alt} width={380} height={220} />
+
+        {read && <div className="flex items-center gap-x-1 absolute bottom-2.5 left-2.5 bg-dark-003/80 rounded-[5px] py-[5px] px-1.5 backdrop-blur-[5px]">
+          <Image src={eyeIcon} alt={'already read identifier'} width={16} height={16} />
+          <span className={cn(roboto_condensed.className, 'font-extrabold text-[15px] uppercase text-light-000 leading-none')}>Read</span>
+        </div>}
       </div>
       <div className={cn('flex flex-col p-1 gap-1', roboto_condensed.className)}>
         <span className='text-dark-003 dark:text-light-main font-medium text-[17px]'>{description}</span>
