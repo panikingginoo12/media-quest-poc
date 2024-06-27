@@ -2,9 +2,10 @@
 
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
-import darkSwitch from 'public/assets/images/dark/dark-mode-switch.svg';
-import lightSwitch from 'public/assets/images/light/light-mode-switch.svg';
 import React, { useCallback, useEffect, useState } from 'react';
+
+import darkSwitch from '@public/assets/images/dark/dark-mode-switch.svg';
+import lightSwitch from '@public/assets/images/light/light-mode-switch.svg';
 
 const ThemeSwitcherButton = () => {
   const { theme, setTheme } = useTheme();

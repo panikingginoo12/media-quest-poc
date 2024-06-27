@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import oneNetwork from 'public/assets/images/dark/one-network-media-group-logo.png';
 import React from 'react';
+
+import oneNetwork from '@public/assets/images/dark/one-network-media-group-logo.png';
 
 import SocialImages from './SocialImages';
 
