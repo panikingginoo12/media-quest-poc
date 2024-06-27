@@ -11,6 +11,7 @@ type League = string
 type Type = string
 
 interface TileProps {
+  read?: boolean;
   img: {
     src: string;
     alt: string;
@@ -22,10 +23,12 @@ interface TileProps {
   author?: string;
 }
 
-const Tile = ({ img, description = '', leagues, types, date, author }: TileProps) => {
+const Tile = ({ read, img, description = '', leagues, types, date, author }: TileProps) => {
   return (
-    <div className='w-[380px] min-h-[346px] bg-light-000 dark:bg-dark-main rounded-[14px] p-2.5 flex flex-col gap-2 overflow-hidden'>
-      <Image src={img.src} alt={img.alt} width={380} height={220} />
+    <div className='w-[380px] min-h-[346px] bg-light-000 dark:bg-dark-main rounded-[14px] p-2.5 flex flex-col gap-2 overflow-hidden hover:dark:bg-dark-002 transition-[background-color] cursor-pointer'>
+      <div className="relative">
+        <Image src={img.src} alt={img.alt} width={380} height={220} />
+      </div>
       <div className={cn('flex flex-col p-1 gap-1', roboto_condensed.className)}>
         <span className='text-dark-003 dark:text-light-main font-medium text-[17px]'>{description}</span>
         <div className="flex gap-[3px] items-center">
