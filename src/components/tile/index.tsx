@@ -37,8 +37,6 @@ const Tile = ({
     <div
       className={cn(
         'flex',
-        'min-h-[346px]',
-        'w-[380px]',
         'cursor-pointer',
         'flex-col',
         'gap-2',
@@ -58,7 +56,13 @@ const Tile = ({
       )}
     >
       <div className="relative">
-        <Image src={img.src} alt={img.alt} width={380} height={220} />
+        <Image
+          src={img.src}
+          alt={img.alt}
+          layout="responsive"
+          width={380}
+          height={220}
+        />
 
         {read && (
           <div className="absolute bottom-2.5 left-2.5 flex items-center gap-x-1 rounded-[5px] bg-dark-003/80 px-1.5 py-[5px] backdrop-blur-[5px]">

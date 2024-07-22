@@ -23,15 +23,15 @@ export default function RootLayout({
       <body
         className={cn(
           roboto.className,
-          'bg-light-000 antialiased text-dark-main'
+          'bg-light-000 text-dark-main antialiased'
         )}
       >
         <ThemeProvider>
-          <div className="flex flex-col h-dvh">
+          <div className="flex h-dvh flex-col">
             <header>
               <ThemeSwitcherButton />
             </header>
-            <main className="flex-1 bg-light-000">{children}</main>
+            <main className="flex-1 bg-light-000 p-4">{children}</main>
             <Footer />
           </div>
         </ThemeProvider>
