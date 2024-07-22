@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'd3a8hr4xxxm5vp.cloudfront.net',
+        hostname: 'djwysygjbhlot.cloudfront.net',
         port: '',
         pathname: '/**',
       },
